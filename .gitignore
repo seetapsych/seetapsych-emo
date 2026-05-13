@@ -1,0 +1,17 @@
+# project
+/.idea/
+/.venv/
+/venv/
+/dist/
+/*.egg-info/
+
+# compiled files
+__pycache__/
+*.pyc
+
+# models
+*.pth
+*.onnx
+*.safetensors
+*.pkl
+*.zip

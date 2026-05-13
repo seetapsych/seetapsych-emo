@@ -1,0 +1,44 @@
+[project]
+name = "fabopsy-affect"
+version = "0.0.1"
+requires-python = ">=3.10"
+dependencies = [
+    "fabopsy_ufanet",
+    "timm>=1.0.27",
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+    "safetensors>=0.7.0",
+    "fabopsy-lib>=0.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "build>=1.5.0",
+    "fabopsy-attributes>=0.0.1",
+    "opencv-python>=4.13.0.92",
+    "streamlit>=1.57.0",
+    "twine>=6.2.0",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu121", marker = "sys_platform == 'linux'" },
+]
+torchvision = [
+    { index = "pytorch-cu121", marker = "sys_platform == 'linux'" },
+]
+fabopsy_ufanet = { git = "https://github.com/lcqin111/fabopsy_ufanet.git" }
+
+[[tool.uv.index]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+# Eanble this option to allow package dependencie fabopsy_ufanet from git.
+# This is not allowed to publish to PyPI.
+allow-direct-references = true

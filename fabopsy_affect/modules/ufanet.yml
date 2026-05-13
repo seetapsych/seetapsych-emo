@@ -1,0 +1,42 @@
+version: '1.0'
+module:
+  uid: c19c71aa-7558-4f73-abf7-b5d929bc0dfa
+  name: UFANet
+  version: 0.0.1
+  description: 'Unified Facial Affect Network.'
+  keywords:
+    - Face
+    - Emotion
+    - Expression
+    - Affect
+  requirements:
+    - timm>=1.0.27
+    - torch>=2.5.1
+    - torchvision>=0.20.1
+    - safetensors>=0.7.0
+  refs:
+    - name: fabopsy_ufanet
+      repo: https://github.com/lcqin111/fabopsy_ufanet.git
+packages:
+  - uid: 2951cff6-46c0-4506-8f6b-ba016a00a35b
+    name: UFANet-Affect
+    version: 0.0.1
+    usage_models: []
+    inputs: []
+    provides:
+      - face/action_units
+      - face/expression
+      - face/dimensional_affect
+    requires:
+      - face/landmarks
+    entry:
+      method: fabopsy_affect.ufanet.package.load
+    models:
+      - uid: 80b96924-b762-4fb7-ad60-813a91c6b7d0
+        name: 20260422_195809_50.safetensors
+        version: 0.0.1
+        recommended: true
+        metadata:
+          model_name: mae_vit_base_patch16
+        entry:
+          method: fabopsy_affect.ufanet.model.load
