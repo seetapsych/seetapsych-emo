@@ -42,8 +42,8 @@ class Instance(api.Instance):
 
         face_landmarks = report.get('face_landmarks', [])
 
-        face_action_units = []
         face_expression = []
+        face_action_units = []
         face_dimensional_affect = []
 
         for the_landmarks in face_landmarks:
@@ -55,15 +55,15 @@ class Instance(api.Instance):
 
             cls_pred, au_pred, valence_pred, arousal_pred = self.__model.detect(face_rgb)
 
-            face_action_units.append({ k: v for k, v in zip(self.__class_map['action_units'], au_pred)})
             face_expression.append({ k: v for k, v in zip(self.__class_map['expression'], cls_pred)})
+            face_action_units.append({ k: v for k, v in zip(self.__class_map['action_units'], au_pred)})
             face_dimensional_affect.append({
                 'valence': valence_pred,
                 'arousal': arousal_pred,
             })
         return {
-            'face_action_units': face_action_units,
             'face_expression': face_expression,
+            'face_action_units': face_action_units,
             'face_dimensional_affect': face_dimensional_affect,
         }
 
