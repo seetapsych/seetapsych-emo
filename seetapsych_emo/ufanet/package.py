@@ -4,9 +4,9 @@ from typing import Any
 
 import numpy
 
-from fabopsy_lib import api
-from fabopsy_ufanet.core import Detector
-from fabopsy_ufanet.five_pts_alignment import face_align_crop
+from seetapsych_lib import api
+from .lib.core import Detector
+from .lib.five_pts_alignment import face_align_crop
 
 CLASS_MAP = {
     'mae_vit_base_patch16': {

@@ -1,44 +1,77 @@
 [project]
-name = "fabopsy-affect"
-version = "0.0.1"
+name = "seetapsych-emo"
+description = "Facial affect/emotion recognition modules for SeetaPsych"
+readme = "README.md"
 requires-python = ">=3.10"
+dynamic = ["version"]
+license = { file = "LICENSE" }
 dependencies = [
-    "fabopsy_ufanet",
+    "seetapsych-lib",
+]
+
+[project.optional-dependencies]
+all = [
     "timm>=1.0.27",
-    "torch>=2.5.1",
-    "torchvision>=0.20.1",
+    "torch>=2.10.0",
+    "torchvision>=0.25.0",
     "safetensors>=0.7.0",
-    "fabopsy-lib>=0.0.1",
+]
+dev = [
+    "seetapsych-emo[all]",
+    "build>=1.4.4",
+    "twine>=6.2.0",
 ]
 
 [dependency-groups]
 dev = [
-    "build>=1.5.0",
-    "fabopsy-attributes>=0.0.1",
-    "opencv-python>=4.13.0.92",
-    "streamlit>=1.57.0",
-    "twine>=6.2.0",
+    "seetapsych-emo[dev]",
 ]
 
-[tool.uv.sources]
-torch = [
-    { index = "pytorch-cu121", marker = "sys_platform == 'linux'" },
-]
-torchvision = [
-    { index = "pytorch-cu121", marker = "sys_platform == 'linux'" },
-]
-fabopsy_ufanet = { git = "https://github.com/lcqin111/fabopsy_ufanet.git" }
+[tool.uv]
+default-groups = ["dev"]
 
-[[tool.uv.index]]
-name = "pytorch-cu121"
-url = "https://download.pytorch.org/whl/cu121"
-explicit = true
+[tool.hatch.version]
+source = "vcs"
+fallback-version = "0.0.0.dev0"
+tag-pattern = "^r(?P<version>[^-]+)$"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "seetapsych_emo/_version.py"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling>=1.26", "hatch-vcs>=0.4.0"]
 build-backend = "hatchling.build"
 
-[tool.hatch.metadata]
-# Eanble this option to allow package dependencie fabopsy_ufanet from git.
-# This is not allowed to publish to PyPI.
-allow-direct-references = true
+[tool.hatch.build.targets.wheel]
+packages = ["seetapsych_emo"]
+
+[tool.hatch.build.targets.wheel.package-data]
+seetapsych_emo = ["modules/**/*.yml"]
+
+[tool.uv.sources]
+# seetapsych-lib = { workspace = true }
+
+torch = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'linux' or (sys_platform == 'win32' and platform_machine == 'AMD64')" },
+    { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+]
+
+torchvision = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'linux' or (sys_platform == 'win32' and platform_machine == 'AMD64')" },
+    { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+]
+
+torchaudio = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'linux' or (sys_platform == 'win32' and platform_machine == 'AMD64')" },
+    { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

@@ -14,12 +14,9 @@ module:
     - torch>=2.5.1
     - torchvision>=0.20.1
     - safetensors>=0.7.0
-  refs:
-    - name: fabopsy_ufanet
-      repo: https://github.com/lcqin111/fabopsy_ufanet.git
 packages:
   - uid: 2951cff6-46c0-4506-8f6b-ba016a00a35b
-    name: UFANet-Affect
+    name: Affect(UFANet)
     version: 0.0.1
     usage_models: []
     inputs: []
@@ -30,13 +27,15 @@ packages:
     requires:
       - face/landmarks
     entry:
-      method: fabopsy_affect.ufanet.package.load
+      method: seetapsych_emo.ufanet.package.load
     models:
       - uid: 80b96924-b762-4fb7-ad60-813a91c6b7d0
-        name: 20260422_195809_50.safetensors
+        name: seeta-emo-ufanet-2604.safetensors
         version: 0.0.1
         recommended: true
         metadata:
           model_name: mae_vit_base_patch16
-        entry:
-          method: fabopsy_affect.ufanet.model.load
+        download:
+          index: seeta-emo-ufanet-2604.safetensors
+          sha256: 15968f366390a3c8ac1d1ad8a07214bf3817039cfdff990a06081174e2912cc9
+          url: https://www.modelscope.cn/models/seetapsych/seetapsych-models/resolve/master/seetapsych/emo/seeta-emo-ufanet-2604.safetensors

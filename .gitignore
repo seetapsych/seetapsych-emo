@@ -2,12 +2,36 @@
 /.idea/
 /.venv/
 /venv/
+/build/
 /dist/
 /*.egg-info/
+/.eggs/
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/
+/.tox/
+/.nox/
+/htmlcov/
+/.coverage
+/coverage.xml
+/.hypothesis/
+/.cache/
+/.upload/
+/.streamlit/
+/.ipynb_checkpoints/
+*.log
+.env
+
+# generated files
+seetapsych_emo/_version.py
 
 # compiled files
-__pycache__/
 *.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.so
+*$py.class
 
 # models
 *.pth
