@@ -10,6 +10,7 @@ module:
     - Expression
     - Affect
   requirements:
+    - seetapsych-emo
     - timm>=1.0.27
     - torch>=2.5.1
     - torchvision>=0.20.1
