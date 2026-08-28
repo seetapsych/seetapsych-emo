@@ -18,7 +18,7 @@ module:
 packages:
   - uid: 2951cff6-46c0-4506-8f6b-ba016a00a35b
     name: Emotions(UFANet)
-    description: Unified multi-task affect estimation: action units, expression classes and valence-arousal
+    description: 'Unified multi-task affect estimation: action units, expression classes and valence-arousal'
     version: 0.0.1
     usage_models: []
     inputs: []
