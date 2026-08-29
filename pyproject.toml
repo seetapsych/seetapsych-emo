@@ -9,6 +9,11 @@ dependencies = [
     "seetapsych-lib",
 ]
 
+[project.urls]
+Homepage = "https://github.com/seetapsych/seetapsych-emo"
+Repository = "https://github.com/seetapsych/seetapsych-emo"
+Issues = "https://github.com/seetapsych/seetapsych-emo/issues"
+
 [project.optional-dependencies]
 all = [
     "timm>=1.0.27",
