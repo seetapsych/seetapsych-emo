@@ -27,11 +27,11 @@ from seetapsych_lib.runtime.factory import Factory
 from seetapsych_lib.runtime.pipeline import Pipeline
 
 factory = Factory()
-factory.load_file_modules('seetapsych_emo/modules/ufanet.yml')
+factory.load_file_modules("seetapsych_emo/modules/ufanet.yml")
 
 pipeline = Pipeline(factory, ...)
 
-pipeline.add_attributes('face/expression', 'face/action_units', 'face/dimensional_affect')
+pipeline.add_attributes("face/expression", "face/action_units", "face/dimensional_affect")
 ```
 
 ## Introduction

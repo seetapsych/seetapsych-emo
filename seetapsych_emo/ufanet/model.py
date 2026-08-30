@@ -4,7 +4,6 @@ import os.path
 
 from seetapsych_lib import api
 
-
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -21,17 +20,19 @@ class UFANetModel(api.Model):
             return self.__path
 
         raise RuntimeError(
-            f'Unable to download on my own. '
-            f'Need to contact the developer to obtain {self.__name} and place it in the directory {ROOT}')
+            f"Unable to download on my own. "
+            f"Need to contact the developer to obtain {self.__name} "
+            f"and place it in the directory {ROOT}"
+        )
 
 
 def load() -> api.Model:
-    return UFANetModel('20260422_195809_50.safetensors')
+    return UFANetModel("20260422_195809_50.safetensors")
 
 
 def main():
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
