@@ -15,6 +15,7 @@ module:
     - torch>=2.5.1
     - torchvision>=0.20.1
     - safetensors>=0.7.0
+    - opencv-python>=4.13.0.90
 packages:
   - uid: 2951cff6-46c0-4506-8f6b-ba016a00a35b
     name: Emotions(UFANet)

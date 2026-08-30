@@ -20,6 +20,7 @@ all = [
     "torch>=2.10.0",
     "torchvision>=0.25.0",
     "safetensors>=0.7.0",
+    "opencv-python>=4.13.0.90",
 ]
 dev = [
     "seetapsych-emo[all]",
