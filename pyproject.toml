@@ -17,8 +17,8 @@ Issues = "https://github.com/seetapsych/seetapsych-emo/issues"
 [project.optional-dependencies]
 all = [
     "timm>=1.0.27",
-    "torch>=2.10.0",
-    "torchvision>=0.25.0",
+    "torch>=2.9.1",
+    "torchvision>=0.24.1",
     "safetensors>=0.7.0",
     "opencv-python>=4.13.0.90",
 ]
