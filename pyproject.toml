@@ -54,7 +54,7 @@ exclude = [
     "*.egg-info",
     "seetapsych_emo/_version.py",
     # third-party vendored code
-    "seetapsych_emo/ufanet/lib",
+    "seetapsych_emo/emonet/lib",
 ]
 
 [tool.ruff.lint]
@@ -85,7 +85,7 @@ exclude = [
     "seetapsych_emo/_version.py",
     "tests/",
     # third-party vendored code
-    "seetapsych_emo/ufanet/lib",
+    "seetapsych_emo/emonet/lib",
 ]
 
 [tool.bandit]
@@ -95,7 +95,7 @@ exclude_dirs = [
     "dist",
     "build",
     # third-party vendored code
-    "seetapsych_emo/ufanet/lib",
+    "seetapsych_emo/emonet/lib",
 ]
 # ML-ecosystem standard usage skips:
 skips = [

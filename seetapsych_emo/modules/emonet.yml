@@ -1,16 +1,16 @@
 version: '1.0'
 module:
   uid: c19c71aa-7558-4f73-abf7-b5d929bc0dfa
-  name: UFANet
-  version: 0.0.1
-  description: 'Unified Facial Affect Network.'
+  name: SeetaEmoNet
+  version: '1.0'
+  description: 'Multi-task facial affect estimation: action units, categorical expressions, and continuous valence-arousal dimensions.'
   keywords:
-    - Face
     - Emotion
     - Expression
+    - Action Units
     - Affect
   requirements:
-    - seetapsych-emo
+    - seetapsych-emo>=0.0.3
     - timm>=1.0.27
     - torch>=2.5.1
     - torchvision>=0.20.1
@@ -18,9 +18,9 @@ module:
     - opencv-python>=4.13.0.90
 packages:
   - uid: 2951cff6-46c0-4506-8f6b-ba016a00a35b
-    name: Emotions(UFANet)
-    description: 'Unified multi-task affect estimation: action units, expression classes and valence-arousal'
-    version: 0.0.1
+    name: Emotions-SeetaEmoNet
+    description: Unified multi-task MAE-ViT model predicting 16 AUs, 7 expressions, and valence-arousal simultaneously from 5-point aligned face crops
+    version: '1.0'
     usage_models: []
     inputs: []
     provides:
@@ -30,11 +30,11 @@ packages:
     requires:
       - face/landmarks
     entry:
-      method: seetapsych_emo.ufanet.package.load
+      method: seetapsych_emo.emonet.package.load
     models:
       - uid: 80b96924-b762-4fb7-ad60-813a91c6b7d0
         name: seeta-emo-ufanet-2604.safetensors
-        version: 0.0.1
+        version: '1.0'
         recommended: true
         metadata:
           model_name: mae_vit_base_patch16
