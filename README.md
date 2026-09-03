@@ -60,6 +60,11 @@ Module config: [emonet.yml](seetapsych_emo/modules/emonet.yml)
 |---|---|
 | seeta-emo-ufanet-2604.safetensors | ✓ |
 
+**Output Attributes**
+- `face/action_units` — [spec](https://github.com/seetapsych/seetapsych-attributes#faceaction_units).
+- `face/expression` — [spec](https://github.com/seetapsych/seetapsych-attributes#faceexpression).
+- `face/dimensional_affect` — [spec](https://github.com/seetapsych/seetapsych-attributes#facedimensional_affect).
+
 **Output details**:
 - `face/expression`: 7 basic expression classes with confidence scores — neutral, anger, disgust, fear, happy, sad, surprise.
 - `face/action_units`: 16 Facial Action Units with intensities — AU1, AU2, AU4, AU5, AU6, AU7, AU9, AU10, AU12, AU15, AU17, AU20, AU23, AU24, AU25, AU26.
