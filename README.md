@@ -34,17 +34,24 @@ pipeline = Pipeline(factory, ...)
 pipeline.add_attributes("face/expression", "face/action_units", "face/dimensional_affect")
 ```
 
+For a complete end-to-end example with visualization, see [examples/image_emonet.py](https://github.com/seetapsych/seetapsych-emo/blob/main/examples/image_emonet.py).
+
 ### Module Catalog
 
 | YAML Path | Packages |
 |---|---|
-| [emonet.yml](seetapsych_emo/modules/emonet.yml) | Emotions-SeetaEmoNet |
+| [emonet.yml](https://github.com/seetapsych/seetapsych-emo/blob/main/seetapsych_emo/modules/emonet.yml) | Emotions-SeetaEmoNet |
 
 ### SeetaEmoNet
 
 Multi-task facial affect estimation: action units, categorical expressions, and continuous valence-arousal dimensions.
 
-Module config: [emonet.yml](seetapsych_emo/modules/emonet.yml)
+<div align="center" id="figure-emonet-result">
+  <img src="https://raw.githubusercontent.com/seetapsych/seetapsych-emo/main/assets/example-emonet.jpg" alt="SeetaEmoNet visualization of AUs, expressions and valence-arousal on a sample face" style="max-width: 480px; max-height: 480px;"/>
+  <p><em><strong>Figure 1.</strong> SeetaEmoNet output visualization — predicted AUs, expressions, and valence-arousal.</em></p>
+</div>
+
+Module config: [emonet.yml](https://github.com/seetapsych/seetapsych-emo/blob/main/seetapsych_emo/modules/emonet.yml)
 
 | Package Name | Provides Attributes | Requires Attributes |
 |---|---|---|
