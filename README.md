@@ -47,7 +47,7 @@ For a complete end-to-end example with visualization, see [examples/image_emonet
 Multi-task facial affect estimation: action units, categorical expressions, and continuous valence-arousal dimensions.
 
 <div align="center" id="figure-emonet-result">
-  <img src="https://raw.githubusercontent.com/seetapsych/seetapsych-emo/main/assets/example-emonet.jpg" alt="SeetaEmoNet visualization of AUs, expressions and valence-arousal on a sample face" style="max-width: 480px; max-height: 480px;"/>
+  <img src="https://raw.githubusercontent.com/seetapsych/seetapsych-emo/main/assets/example-emonet.jpg" alt="SeetaEmoNet visualization of AUs, expressions and valence-arousal on a sample face" height="480"/>
   <p><em><strong>Figure 1.</strong> SeetaEmoNet output visualization — predicted AUs, expressions, and valence-arousal.</em></p>
 </div>
 
