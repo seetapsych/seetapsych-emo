@@ -55,9 +55,9 @@ Module config: [emonet.yml](https://github.com/seetapsych/seetapsych-emo/blob/ma
 
 | Package Name | Provides Attributes | Requires Attributes |
 |---|---|---|
-| Emotions-SeetaEmoNet | face/action_units, face/expression, face/dimensional_affect | face/landmarks |
+| Emotions-SeetaEmoNet | `face/action_units`, `face/expression`, `face/dimensional_affect` | `face/landmarks` |
 
-**Description**: Unified multi-task MAE-ViT model predicting 16 AUs, 7 expressions, and valence-arousal simultaneously from 5-point aligned face crops
+**Description**: Unified multi-task MAE-ViT model predicting 16 AUs, 7 expressions, and valence-arousal simultaneously from 5-point aligned face crops.
 
 **Parameters**: *(none)*
 
